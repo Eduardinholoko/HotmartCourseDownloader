@@ -286,9 +286,9 @@ function doAgain(currentTab) {
                             //console.log(segmentList);
                             let finalBlob = new Blob([], { type: 'video/mp4' });
 
-                            courseName = String(courseName).replace(/[\\\/\:\*\?\"\<\>\|]/g, " -");
-                            moduleName = String(moduleName).replace(/[\\\/\:\*\?\"\<\>\|]/g, " -");
-                            videoName = String(videoName).replace(/[\\\/\:\*\?\"\<\>\|]/g, " -");
+                            courseName = String(courseName).replace(/[\\\/\:\#*\?\"\<\>\|]/g, " -");
+                            moduleName = String(moduleName).replace(/[\\\/\:\#*\?\"\<\>\|]/g, " -");
+                            videoName = String(videoName).replace(/[\\\/\:\#*\?\"\<\>\|]/g, " -");
 
                             let filename = String(`${courseName}/${moduleName}/${videoName}.mp4`).replace(/(\s){2,}/g, " ")
 

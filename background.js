@@ -286,12 +286,13 @@ function doAgain(currentTab) {
                             //console.log(segmentList);
                             let finalBlob = new Blob([], { type: 'video/mp4' });
 
-                            //courseName = String(courseName).replace(/[\\\/\:\#0*\?\"\<\>\|]/g, " -");
-                            //moduleName = String(moduleName).replace(/[\\\/\:\#0*\?\"\<\>\|]/g, " -");
-                            //videoName = String(videoName).replace(/[\\\/\:\#0*\?\"\<\>\|]/g, " -");
-                            
-                            let filename = String(${courseName}/${moduleName}/${videoName}.mp4).replace(/(\s){2,}/g, " ")
+                            //courseName = String(courseName).replace(/[\\\/\:\*\?\"\<\>\|]/g, " -");
+                            //moduleName = String(moduleName).replace(/[\\\/\:\*\?\"\<\>\|]/g, " -");
+                            //videoName = String(videoName).replace(/[\\\/\:\*\?\"\<\>\|]/g, " -");
+
+                            let filename = String(MeuCurso/${moduleName}/${videoName}.mp4).replace(/(\s){2,}/g, " ")
                             filename = String(filename).replace(/[\/:*?"<>|]/g, "-");
+                                                                                                         
 
                             for (let i = 0, p = Promise.resolve(); i < segmentList.length; i++) {
                                 p = p.then(() => (
